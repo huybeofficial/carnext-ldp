@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Carnext</title>
+  <link rel="icon" type="image/png" href="/public/logo_carnext.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta property="og:title" content="Carnext" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  <link href="./custom_style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="customAlert" class="custom-alert"></div>
+  <div id="customModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+  <link rel="stylesheet" href="./style.css" />
+  <div>
+    <link href="./index.css" rel="stylesheet" />
+
+    <div class="home-container">
+      <header data-thq="thq-navbar" class="home-navbar-interactive">
+        <a href="index.html" class="home-navlink">
+          <img alt="logo" src="/public/carnext%20logo-1500h.png" class="home-image" />
+        </a>
+        <div data-thq="thq-navbar-nav" class="home-desktop-menu">
+          <nav class="home-links">
+            <a href="#feature" class="home-link Content">Tính năng</a>
+            <a href="#price" class="home-link1 Content">Bảng giá</a>
+            <a href="#contact" class="home-link2 Content">Liên hệ</a>
+            <span class="home-text">|</span>
+            <a href="about.html" class="home-navlink1 Content">
+              Về chúng tôi
+            </a>
+            <span class="home-text001">|</span>
+            <a href="https://gara.carnext.vn/" target="_blank" class="home-text001 Content">Đăng nhập</a>
+          </nav>
+          <div class="home-buttons">
+            <a href="#contact" class="home-register button">
+              Đăng ký tài khoản
+            </a>
+          </div>
+        </div>
+        <div data-thq="thq-burger-menu" class="home-burger-menu">
+          <svg viewBox="0 0 1024 1024" class="home-icon">
+            <path
+              d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z">
+            </path>
+          </svg>
+        </div>
+        <div data-thq="thq-mobile-menu" class="home-mobile-menu">
+          <div class="home-nav">
+            <div class="home-top">
+              <img alt="image" src="/public/carnext%20logo-1500h.png" class="home-logo" />
+              <div data-thq="thq-close-menu" class="home-close-menu">
+                <svg viewBox="0 0 1024 1024" class="home-icon02">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <nav class="home-links1">
+              <a href="#feature" class="home-link3">Tính năng</a>
+              <a href="#price" class="home-link4">Bảng giá</a>
+              <a href="#contact" class="home-link5">Liên hệ</a>
+              <a href="about.html" class="home-navlink2">Về chúng tôi</a>
+            </nav>
+            <div class="home-buttons1">
+              <button class="home-login button">Đăng nhập</button>
+              <a href="#Garage name" class="home-register1 button">Đăng ký</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="home-banner">
+        <img alt="image" src="/public/Top_banner/top_mobile-1500w.png" class="home-image01" />
+        <div class="home-container01">
+          <h1 class="home-text003">
+            <span>CARNEXT</span>
+            <br />
+            <span class="home-text006">
+              Giải pháp quản lý garage toàn diện
+            </span>
+            <br />
+          </h1>
+          <a href="#contact" class="home-link6 button">
+            <span class="home-text008">
+              <span class="home-text009">DÙNG THỬ MIỄN PHÍ</span>
+              <br />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="home-stats">
+        <animate-on-reveal animation="fadeInUp" duration="700ms" delay="nullms" direction="normal" easing="ease-in-out"
+          iteration="1">
+          <div data-thq-animate-on-reveal="true" class="home-stat">
+            <img alt="image" src="/public/garage%20(1).svg" class="home-image02" />
+            <span class="home-text011">Garage</span>
+            <h1 class="home-text012">50</h1>
+          </div>
+        </animate-on-reveal>
+        <animate-on-reveal animation="fadeInUp" duration="700ms" delay="0ms" direction="normal" easing="ease-in-out"
+          iteration="1">
+          <div data-thq-animate-on-reveal="true" class="home-stat1">
+            <img alt="image" src="/public/user (1).svg" class="home-image03" />
+            <span class="home-text013">Người dùng</span>
+            <h1 class="home-text014"><span>300</span></h1>
+          </div>
+        </animate-on-reveal>
+        <animate-on-reveal animation="fadeInUp" duration="700ms" delay="0ms" direction="normal" easing="ease-in-out"
+          iteration="1">
+          <div data-thq-animate-on-reveal="true" class="home-stat2">
+            <img alt="image" src="/public/city-20-regular%20(1).svg" class="home-image04" />
+            <span class="home-text016">Tỉnh thành</span>
+            <h1 class="home-text017">15</h1>
+          </div>
+        </animate-on-reveal>
+      </div>
+      <div class="home-hero">
+        <div class="home-container02">
+          <animate-on-reveal animation="fadeInUp" duration="700ms" delay="0s" direction="normal" easing="ease-in-out"
+            iteration="1">
+            <h1 data-thq-animate-on-reveal="true" class="home-text018">
+              <span>Garage của bạn</span>
+              <br />
+              <span>đang gặp khó khăn trong việc quản lý?</span>
+              <br />
+            </h1>
+          </animate-on-reveal>
+          <div class="home-container03">
+            <div class="home-container04">
+              <div class="home-container05">
+                <div class="home-container06">
+                  <img alt="image" src="/public/Kho khan/invento.svg" class="home-image05" />
+                  <span>Quản lý kho kém hiệu quả</span>
+                </div>
+                <div class="home-container07">
+                  <img alt="image" src="/public/Kho khan/confused.svg" class="home-image06" />
+                  <span>Quy trình ko chuẩn, sót việc</span>
+                </div>
+              </div>
+            </div>
+            <div class="home-container08">
+              <div class="home-container09">
+                <div class="home-container10">
+                  <img alt="image" src="/public/Kho khan/hard.svg" class="home-image07" />
+                  <span>Phần mềm khó sử dụng</span>
+                </div>
+                <div class="home-container11">
+                  <img alt="image" src="/public/Kho khan/money.svg" class="home-image08" />
+                  <span>Không thống kê chi tiêu</span>
+                </div>
+              </div>
+            </div>
+            <div class="home-container12">
+              <img alt="image" src="/public/Kho khan/human.svg" class="home-image09" />
+            </div>
+          </div>
+          <div class="home-container13">
+            <div class="home-container14">
+              <div class="home-container15">
+                <div class="home-container16">
+                  <div class="home-container17">
+                    <span>Quản lý kho kém hiệu quả</span>
+                    <img alt="image" src="/public/Kho khan/invento.svg" class="home-image10" />
+                  </div>
+                  <div class="home-container18">
+                    <span>Quy trình ko chuẩn, sót việc</span>
+                    <img alt="image" src="/public/Kho khan/confused.svg" class="home-image11" />
+                  </div>
+                </div>
+              </div>
+              <div class="home-container19">
+                <img alt="image" src="/public/Kho khan/human.svg" class="home-image12" />
+              </div>
+              <div class="home-container20">
+                <div class="home-container21">
+                  <div class="home-container22">
+                    <img alt="image" src="/public/Kho khan/hard.svg" class="home-image13" />
+                    <span>Phần mềm khó sử dụng</span>
+                  </div>
+                  <div class="home-container23">
+                    <img alt="image" src="/public/Kho khan/money.svg" class="home-image14" />
+                    <span>Không thống kê chi tiêu</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <img alt="image" src="/public/video%201-1500w.png" class="home-image15" /> -->
+            <div class="div-video">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QvYXUiIQj9c?si=CiqexmJ1H8PUbM_h"
+                title="Carnext - Giải pháp toàn diện cho garage của bạn" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-features">
+        <div class="home-container24">
+          <h1 class="home-text031">
+            <span class="home-text032">CARNEXT</span>
+            <br class="home-text033" />
+            <span class="home-text034">có thể giúp bạn</span>
+            <br />
+          </h1>
+          <div class="home-separator"></div>
+        </div>
+        <div class="home-container25">
+          <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
+            <div data-thq-animate-on-reveal="true" class="home-feature-card">
+              <img alt="image" src="/public/Loi ich/tang%20truong-400h.png" class="home-image16" />
+              <h3 class="home-text038">
+                Quản lý tiếp nhận xe - Quy trình dịch vụ
+              </h3>
+              <span class="home-text037 Content">
+                Carnext cung cấp một hệ thống quản lý toàn diện, giúp garage
+                vận hành trơn tru và hiệu quả.
+              </span>
+            </div>
+          </animate-on-reveal>
+          <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
+            <div data-thq-animate-on-reveal="true" class="home-feature-card">
+              <img alt="image" src="/public/Loi ich/tietkiem-400h.png" class="home-image17" />
+              <h3 class="home-text038">
+                Quản lý kho thông minh - Cảnh báo tồn kho
+              </h3>
+              <span class="home-text039 Content">
+                Phần mềm tích hợp đầy đủ các tính năng cần thiết, giúp bạn
+                nắm bắt thông tin toàn diện về khách hàng, xe, kho, dịch
+                vụ,...
+              </span>
+            </div>
+          </animate-on-reveal>
+          <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
+            <div data-thq-animate-on-reveal="true" class="home-feature-card">
+              <img alt="image" src="/public/Loi ich/chamsoc-400h.png" class="home-image18" />
+              <h3 class="home-text038">
+                Quản lý tài chính - Phân tích chỉ số kinh doanh, tăng trưởng.
+              </h3>
+              <span class="home-text044 Content">
+                Tính năng này giúp bạn nắm bắt được dòng tiền, tối ưu chi phí cho garage của mình. Đưa ra các phương án, chiến lược phù
+                hợp để phát triển hơn trong tương lai.
+              </span>
+            </div>
+          </animate-on-reveal>
+          <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
+            <div data-thq-animate-on-reveal="true" class="home-feature-card">
+              <img alt="image" src="/public/Loi ich/thongtin-400h.png" class="home-image19" />
+              <h3 class="home-text038">Giao diện thân thiện, dễ sử dụng</h3>
+              <span class="home-text046 Content">
+                <span>
+                  Giao diện thân thiện, dễ sử dụng, giúp bạn thao tác nhanh
+                  chóng và chính xác ngay từ lần đầu sử dụng.
+                </span>
+                <br class="home-text048" />
+              </span>
+            </div>
+          </animate-on-reveal>
+        </div>
+      </div>
+      <!-- <img alt="image" src="/public/video%202-1500w.png" class="home-image20" /> -->
+      <div id="feature" class="home-feature">
+        <div class="home-container26">
+          <h1 class="home-text049">Tính năng nổi bật của CARNEXT</h1>
+        </div>
+        <div class="home-container27">
+          <div class="home-container28">
+            <div class="home-container29">
+              <div class="home-container30">
+                <div class="home-container31">
+                  <svg viewBox="0 0 877.7142857142857 1024" class="home-icon04">
+                    <path
+                      d="M800 731.429h-141.714v141.714c9.714-3.429 19.429-8.571 23.429-12.571l105.714-105.714c4-4 9.143-13.714 12.571-23.429zM640 658.286h164.571v-512h-731.429v731.429h512v-164.571c0-30.286 24.571-54.857 54.857-54.857zM877.714 128v585.143c0 30.286-17.714 72.571-38.857 93.714l-105.143 105.143c-21.143 21.143-63.429 38.857-93.714 38.857h-585.143c-30.286 0-54.857-24.571-54.857-54.857v-768c0-30.286 24.571-54.857 54.857-54.857h768c30.286 0 54.857 24.571 54.857 54.857z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-container32">
+                  <h1 class="home-text050">Phiếu tiếp nhận</h1>
+                  <h1 class="home-text051 Content">
+                    Có sự tương tác giữa cố vấn, quản đốc và chủ xe.
+                  </h1>
+                </div>
+              </div>
+              <div class="home-container33">
+                <div class="home-container34">
+                  <svg viewBox="0 0 1024 1024" class="home-icon06">
+                    <path
+                      d="M554 128h342v256h-342v-256zM554 896v-426h342v426h-342zM128 896v-256h342v256h-342zM128 554v-426h342v426h-342z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-container35">
+                  <h1 class="home-text052">Báo cáo</h1>
+                  <h1 class="home-text053 Content">
+                    Thống kê rõ ràng, minh bạch
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="home-container36">
+              <div class="home-container37">
+                <div class="home-container38">
+                  <svg viewBox="0 0 1024 1024" class="home-icon08">
+                    <path
+                      d="M726 810v-596h-428v596h428zM726 44q34 0 59 25t25 59v768q0 34-25 60t-59 26h-428q-34 0-59-26t-25-60v-768q0-34 25-60t59-26z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-container39">
+                  <h1 class="home-text054">Ứng dụng di động</h1>
+                  <h1 class="home-text055 Content">
+                    Thuận tiện cho chủ xe và garage tương tác với nhau, theo
+                    dõi toàn bộ tiền độ xe từ lúc xe vào xưởng đến khi ra
+                    xưởng
+                  </h1>
+                </div>
+              </div>
+              <div class="home-container40">
+                <div class="home-container41">
+                  <svg viewBox="0 0 1024 1024" class="home-icon10">
+                    <path
+                      d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM320 512c0-106.040 85.96-192 192-192s192 85.96 192 192-85.96 192-192 192-192-85.96-192-192zM925.98 683.476v0l-177.42-73.49c12.518-30.184 19.44-63.276 19.44-97.986s-6.922-67.802-19.44-97.986l177.42-73.49c21.908 52.822 34.020 110.73 34.020 171.476s-12.114 118.654-34.020 171.476v0zM683.478 98.020v0 0l-73.49 177.42c-30.184-12.518-63.276-19.44-97.988-19.44s-67.802 6.922-97.986 19.44l-73.49-177.422c52.822-21.904 110.732-34.018 171.476-34.018 60.746 0 118.654 12.114 171.478 34.020zM98.020 340.524l177.422 73.49c-12.518 30.184-19.442 63.276-19.442 97.986s6.922 67.802 19.44 97.986l-177.42 73.49c-21.906-52.822-34.020-110.73-34.020-171.476s12.114-118.654 34.020-171.476zM340.524 925.98l73.49-177.42c30.184 12.518 63.276 19.44 97.986 19.44s67.802-6.922 97.986-19.44l73.49 177.42c-52.822 21.904-110.73 34.020-171.476 34.020-60.744 0-118.654-12.114-171.476-34.020z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-container42">
+                  <h1 class="home-text056">Dịch vụ chăm sóc Khách hàng</h1>
+                  <h1 class="home-text057 Content">
+                    Chuyển đổi toàn bộ dữ liệu, hỗ trợ tư vấn, hướng dẫn sử
+                    dụng qua các kênh liên lạc CSKH 24/7
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-container43">
+          <div class="home-container44">
+            <div class="home-container45">
+              <h1>Carinfo - App cho chủ xe</h1>
+            </div>
+            <div class="home-container46">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image21" />
+              <div class="home-container47">
+                <h3>Theo dõi tình trạng thực tế của xe</h3>
+                <span class="home-text060">
+                  Chủ xe có thể xem thông tin về lịch sử vận hành, tình trạng
+                  bảo dưỡng,... của xe trực tiếp trên ứng dụng
+                </span>
+              </div>
+            </div>
+            <div class="home-container48">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image22" />
+              <div class="home-container49">
+                <h3>Đặt lịch sửa chữa, bảo dưỡng xe</h3>
+                <span class="home-text062">
+                  Chủ xe có thể đặt lịch sửa chữa, bảo dưỡng xe nhanh chóng và
+                  dễ dàng trên ứng dụng.
+                </span>
+              </div>
+            </div>
+            <div class="home-container50">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image23" />
+              <div class="home-container51">
+                <h3>Nhận thông báo lịch bảo dưỡng, sửa chữa</h3>
+                <span class="home-text064">
+                  Chủ xe sẽ nhận được thông báo lịch bảo dưỡng, sửa chữa từ
+                  ứng dụng để chủ động sắp xếp thời gian.
+                </span>
+              </div>
+            </div>
+            <div class="home-container52">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image24" />
+              <div class="home-container53">
+                <h3>Thuê xe</h3>
+                <span class="home-text066">
+                  Chủ xe có thể thuê xe thông qua ứng dụng khi cần.
+                </span>
+              </div>
+            </div>
+            <div class="home-container54">
+              <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image25" />
+              <div class="home-container55">
+                <h3>Theo dõi và tương tác được với quy trình sửa xe</h3>
+                <span class="home-text068">
+                  Chủ xe có thể theo dõi và tương tác được với quy trình sửa
+                  xe của mình thông qua ứng dụng, giúp chủ xe nắm được tình
+                  hình sửa xe và đưa ra ý kiến.
+                </span>
+              </div>
+            </div>
+          </div>
+          <img alt="image" src="https://play.teleporthq.io/static/svg/default-img.svg" class="home-image26" />
+        </div>
+      </div>
+      <div id="progress" class="home-steps">
+        <h1 class="home-text069">
+          <span>Quy trình tiêu chuẩn quản lý &amp; tiếp nhận xe</span>
+          <br />
+        </h1>
+        <img alt="image" src="/public/Quy trinh/quy%20trinh%20-%20carnext-1400w.png" class="home-image27" />
+        <script>
+          window.onload = function () {
+            var img = document.querySelector('.home-image27');
+            if (window.innerWidth <= 768) {
+              img.src = "/public/Quy trinh/Progress mobile.png";
+            }
+          }
+        </script>
+      </div>
+      <div class="home-container56">
+        <h1 class="home-text072">
+          <span>Đánh giá từ khách hàng</span>
+          <br />
+        </h1>
+        <span class="home-text075">
+          <span class="home-text076">
+            Chất lượng dịch vụ luôn là yếu tố được đặt lên hàng đầu tại
+            Carnext
+          </span>
+          <br />
+        </span>
+        <div class="home-container57">
+          <div class="home-testimonial-card">
+            <svg viewBox="0 0 950.8571428571428 1024" class="home-icon12">
+              <path
+                d="M438.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714zM950.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714z">
+              </path>
+            </svg>
+            <div class="home-testimonial">
+              <span class="home-text078 Content">
+                Trước đây, tôi quản lý garage theo cách truyền thống, gặp
+                nhiều bất cập. Sau khi sử dụng Carnext, tôi đã giải quyết được
+                tất cả các bất cập đó và quản lý garage một cách hiệu quả hơn.
+                Carnext giúp tôi tiết kiệm thời gian, công sức, tăng cường
+                hiệu quả kinh doanh. Tôi đánh giá Carnext là một phần mềm quản
+                lý garage ô tô hiệu quả, tối ưu chi phí.
+              </span>
+              <span class="home-text079">Trần Minh Đức</span>
+              <span class="home-text080">Chủ garage tại Hà Nội</span>
+              <img alt="profile" src="/public/Testi/5af7d27ad7-200h.jpg" class="home-image28" />
+            </div>
+          </div>
+          <div class="home-testimonial-card">
+            <svg viewBox="0 0 950.8571428571428 1024" class="home-icon14">
+              <path
+                d="M438.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714zM950.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714z">
+              </path>
+            </svg>
+            <div class="home-testimonial1">
+              <span class="home-text081 Content">
+                Tôi đang sử dụng phần mềm Carnext. Với Carnext, tôi có thể dễ
+                dàng quản lý tất cả các hoạt động của garage chỉ với một chiếc
+                máy tính hoặc điện thoại thông minh. Phần mềm giúp tôi nắm bắt
+                được tình hình hoạt động của garage một cách nhanh chóng và
+                chính xác, từ đó có thể đưa ra những quyết định kịp thời và
+                hiệu quả.
+              </span>
+              <span class="home-text082">Mai Hải Nam</span>
+              <span class="home-text083">Chủ Garage tại Đà Nẵng</span>
+              <img alt="profile" src="/public/Testi/94472e133d-200h.jpg" class="home-image29" />
+            </div>
+          </div>
+          <div class="home-testimonial-card">
+            <svg viewBox="0 0 950.8571428571428 1024" class="home-icon16">
+              <path
+                d="M438.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714zM950.857 182.857v402.286c0 161.143-131.429 292.571-292.571 292.571h-36.571c-20 0-36.571-16.571-36.571-36.571v-73.143c0-20 16.571-36.571 36.571-36.571h36.571c80.571 0 146.286-65.714 146.286-146.286v-18.286c0-30.286-24.571-54.857-54.857-54.857h-128c-60.571 0-109.714-49.143-109.714-109.714v-219.429c0-60.571 49.143-109.714 109.714-109.714h219.429c60.571 0 109.714 49.143 109.714 109.714z">
+              </path>
+            </svg>
+            <div class="home-testimonial2">
+              <span class="home-text084 Content">
+                Tôi đánh giá cao phần mềm Carnext, nhưng cũng có một số góp ý
+                về tính năng báo cáo. Hiện tại, phần mềm chỉ cho phép báo cáo
+                tổng quan về số lượng khách hàng, doanh thu, chi phí,... Tuy
+                nhiên, tôi mong muốn có thể bổ sung thêm các tính năng báo cáo
+                chi tiết hơn, như: báo cáo theo loại khách hàng (khách hàng cá
+                nhân/doanh nghiệp), báo cáo theo khu vực/thời gian.
+              </span>
+              <span class="home-text085">Nguyễn Minh Nhật</span>
+              <span class="home-text086">Chuỗi garage tại TP.HCM</span>
+              <img alt="profile" src="/public/Testi/df37eb59e2-200h.jpg" class="home-image30" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="price" class="home-pricing">
+        <table class="table table-bordered text-center mt-4">
+          <thead>
+            <tr>
+              <th style="width: 25%;"></th>
+              <th scope="col">
+                <span class="text-title">Gói tiết kiệm</span>
+                <br />
+                <span class="text-price">3.600.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="2" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+              <th scope="col">
+                <span class="text-title">Gói tiêu chuẩn</span>
+                <br />
+                <span class="text-price">9.000.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="3" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+              <th scope="col">
+                <span class="text-title">Gói nâng cao</span>
+                <br />
+                <span class="text-price">11.000.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="4" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho (nâng cao)</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý sản phẩm</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý bán lẻ</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Sổ quỹ</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo kho</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính</td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính (nâng cao)</td>
+              <td>
+
+              </td>
+              <td>
+
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận</td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận (nâng cao)</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý Lịch hẹn</td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App mobile quản lý</td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App CSKH - Carinfo</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="plan-checkbox">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <form class="home-form">
+        <div id="contact" class="home-container59">
+          <div class="home-container60">
+            <div class="home-container61">
+              <h1 class="home-text087">TƯ VẤN MIỄN PHÍ</h1>
+              <div class="home-container62">
+                <div class="home-container63">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image32" />
+                  <span class="home-text088">
+                    Ưu đãi hàng năm cho khách hàng đã đăng ký sử dụng
+                  </span>
+                </div>
+                <div class="home-container64">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image33" />
+                  <span class="home-text089">
+                    <span>Đào tạo tận nơi sử dụng ứng dụng</span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="home-container65">
+                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                  <span class="home-text092">
+                    Đội ngũ chăm sóc khách hàng trọn đời, sẵn sàng phục vụ
+                    24/7
+                  </span>
+                </div>
+              </div>
+            </div>
+            <img alt="image" src="/public/5921711_20618.svg" class="home-image35" />
+          </div>
+          <div class="home-container66">
+            <div id="Contact form" class="home-container67">
+              <input type="text" placeholder="Tên xưởng" id="Garage name" class="home-textinput input" />
+              <input type="text" id="owner_name-input" placeholder="Họ tên" class="home-textinput1 input" />
+              <input type="text" id="phone-input" placeholder="Số điện thoại" class="home-textinput2 input" />
+              <input id="address-input" type="text" placeholder="Địa chỉ" class="home-textinput3 input" />
+              <select style="cursor: pointer" class="home-select" id="service_attention-input">
+                <option style="cursor: pointer" value="0" selected="">
+                  Gói dịch vụ mà bạn quan tâm?
+                </option>
+                <!-- <option value="1">Gói dùng thử</option> -->
+                <option style="cursor: pointer" value="2">Gói tiết kiệm</option>
+                <option style="cursor: pointer" value="3">Gói tiêu chuẩn</option>
+                <option style="cursor: pointer" value='4'>Gói nâng cao</option>
+                <!-- <option value="4">Gói doanh nghiệp</option> -->
+              </select>
+              <script>
+                document.querySelectorAll('.button-contact').forEach(button => {
+                  button.addEventListener('click', function () {
+                    document.getElementById('service_attention-input').value = this.dataset.package;
+                  });
+                });
+              </script>
+              <button type="button" onclick="handleSubmit()" class="home-button button">
+                <span class="home-text093">
+                  <span>LIÊN HỆ DÙNG THỬ</span>
+                  <br />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="home-container68">
+        <footer class="home-footer">
+          <div class="home-container69">
+            <img alt="image" src="/public/carnext%20logo_w-200h.png" class="home-image36" />
+            <div class="home-container70">
+              <span class="home-text096"><a href="tel:0397 985 866">Hotline: 0397 985 866</a></span>
+              <span class="home-text097"><a href="mailto:info@uninext.vn">Email: info@uninext.vn</a></span>
+              <span class="home-text097">
+                <a
+                target="_blank"
+                  href="https://www.google.com/maps/place/34+Ng.+5+%C4%90.+Ho%C3%A0ng+Qu%E1%BB%91c+Vi%E1%BB%87t,+Ngh%C4%A9a+%C4%90%C3%B4,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i+100000/@21.0449961,105.8045267,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab3d6999b691:0x8c8a866a68a49fac!8m2!3d21.0449961!4d105.8045267!16s%2Fg%2F11p67fncn6?entry=ttu">
+                  Địa chỉ: Số nhà 34, ngõ 5, Hoàng Quốc Việt, Nghĩa Đô, Cầu Giấy, Hà Nội, Việt Nam
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="home-links-container">
+            <div class="home-container71">
+              <div class="home-container72">
+                <span class="home-text098 Content">
+                  <span>
+                    Sở hữu đội ngũ chuyên gia về xây dựng phần mềm và cung cấp
+                    giải pháp cho các Garage. CARNEXT - với sứ mệnh mang đến 1
+                    công cụ quản lý toàn diện cho các xưởng sửa xe. Thúc đẩy
+                    sự phát triển, tăng tiến lợi nhuận cho các Garage thông
+                    qua việc số hóa quy trình vận hành…
+                  </span>
+                  <br />
+                  <br />
+                  <span>
+                    CARNEXT cung cấp giải pháp quản lý toàn diện cho doanh
+                    nghiệp của bạn. Liên hệ ngay với chúng tôi để được tư vấn
+                    và hỗ trợ.
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <span class="home-text103">
+          <span>© 2021 Carnext,&nbsp;</span>
+          <span>All Rights Reserved.</span>
+        </span>
+      </div>
+      <div class="home-container73">
+        <div class="home-container74">
+          <!-- Messenger Plugin chat Code -->
+          <div id="fb-root"></div>
+
+          <!-- Your Plugin chat code -->
+          <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+          <script>
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute('page_id', '1178564152153576');
+            chatbox.setAttribute('attribution', 'biz_inbox');
+          </script>
+
+          <!-- Your SDK code -->
+          <script>
+            window.fbAsyncInit = function () {
+              FB.init({
+                xfbml: true,
+                version: 'v18.0'
+              });
+            };
+
+            (function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  <script defer="" src="https://unpkg.com/@teleporthq/react-components/dist/animate-on-reveal.umd.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
