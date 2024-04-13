@@ -1,0 +1,18 @@
+@media (min-width: 820px) {
+    .home-pricing-web {
+        display: block !important;
+    }
+    .home-pricing-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 819px) {
+    .home-pricing-web {
+        display: none !important;
+    }
+
+    .home-pricing-mobile {
+        display: block !important;
+    }
+}

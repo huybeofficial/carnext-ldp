@@ -116,3 +116,19 @@ th {
 font-weight: 600;
 margin: 15px;
 }
+
+.one-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-box {
+  border: 1px solid rgb(168, 168, 168);
+}
+
+.icon-green {
+  color: #479E45;
+  padding: 0 15px 0 15px;
+  font-size: 1.25rem;
+}

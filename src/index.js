@@ -42,17 +42,27 @@ const handleSubmit = () => {
             }
             return response.json();
         })
-        .then(data => {
-            console.log("Response:", data);
-            if (data.code === 200) {
-                showModal("Yêu cầu thành công!", false);
-                setTimeout(() => {
-                    closeModal();
-                }, 4000);
-            } else {
-                showCustomAlert(data.message, true);
-            }
-        })
+            .then(data => {
+                console.log("Response:", data);
+                if (data.code === 200) {
+                    showModal("Yêu cầu thành công!", false);
+                    setTimeout(() => {
+                        closeModal();
+                    }, 4000);
+
+                    // Reset input fields
+                    const inputs = document.querySelectorAll('.input');
+                    inputs.forEach(input => {
+                        input.value = '';
+                    });
+
+                    // Reset select field to default value
+                    const select = document.querySelector('#service_attention-input');
+                    select.value = '0';
+                } else {
+                    showCustomAlert(data.message, true);
+                }
+            })
         .catch(error => {
             console.error("Error:", error);
             showCustomAlert("Đã xảy ra lỗi. Vui lòng thử lại sau!", true);

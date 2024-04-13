@@ -3,7 +3,7 @@
 
 <head>
   <title>Carnext</title>
-  <link rel="icon" type="image/png" href="/public/logo_carnext.png">
+  <link rel="icon" type="image/webp" href="/public/logo_carnext.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <meta property="og:title" content="Carnext" />
@@ -122,6 +122,7 @@
     }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
     data-tag="font" />
@@ -129,7 +130,9 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
     data-tag="font" />
   <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
-  <link href="./custom_style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./custom_style.css" />
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+
 </head>
 
 <body>
@@ -140,15 +143,16 @@
       <h3 id="modalTitle"></h3>
       <p id="modalMessage"></p>
     </div>
-  </div>
+  </div>css/
   <link rel="stylesheet" href="./style.css" />
   <div>
     <link href="./index.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="responsive.css">
 
     <div class="home-container">
       <header data-thq="thq-navbar" class="home-navbar-interactive">
         <a href="index.html" class="home-navlink">
-          <img alt="logo" src="/public/carnext%20logo-1500h.png" class="home-image" />
+          <img alt="logo" src="/public/carnext-logo-1500h.webp" class="home-image" />
         </a>
         <div data-thq="thq-navbar-nav" class="home-desktop-menu">
           <nav class="home-links">
@@ -164,7 +168,7 @@
           </nav>
           <div class="home-buttons">
             <a href="#contact" class="home-register button">
-              Đăng ký tài khoản
+              <marquee scrollamount="6" direction="left">DÙNG THỬ MIỄN PHÍ</marquee>
             </a>
           </div>
         </div>
@@ -178,7 +182,7 @@
         <div data-thq="thq-mobile-menu" class="home-mobile-menu">
           <div class="home-nav">
             <div class="home-top">
-              <img alt="image" src="/public/carnext%20logo-1500h.png" class="home-logo" />
+              <img alt="image" src="/public/carnext-logo-1500h.webp" class="home-logo" />
               <div data-thq="thq-close-menu" class="home-close-menu">
                 <svg viewBox="0 0 1024 1024" class="home-icon02">
                   <path
@@ -201,7 +205,7 @@
         </div>
       </header>
       <div class="home-banner">
-        <img alt="image" src="/public/Top_banner/top_mobile-1500w.png" class="home-image01" />
+        <img alt="image" src="/public/Top_banner/top_mobile-1500w.webp" class="home-image01" />
         <div class="home-container01">
           <h1 class="home-text003">
             <span>CARNEXT</span>
@@ -223,7 +227,7 @@
         <animate-on-reveal animation="fadeInUp" duration="700ms" delay="nullms" direction="normal" easing="ease-in-out"
           iteration="1">
           <div data-thq-animate-on-reveal="true" class="home-stat">
-            <img alt="image" src="/public/garage%20(1).svg" class="home-image02" />
+            <img alt="image" src="public/garage (1).svg" class="home-image02" />
             <span class="home-text011">Garage</span>
             <h1 class="home-text012">50</h1>
           </div>
@@ -315,7 +319,6 @@
                 </div>
               </div>
             </div>
-            <!-- <img alt="image" src="/public/video%201-1500w.png" class="home-image15" /> -->
             <div class="div-video">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QvYXUiIQj9c?si=CiqexmJ1H8PUbM_h"
                 title="Carnext - Giải pháp toàn diện cho garage của bạn" frameborder="0"
@@ -339,7 +342,7 @@
         <div class="home-container25">
           <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
             <div data-thq-animate-on-reveal="true" class="home-feature-card">
-              <img alt="image" src="/public/Loi ich/tang%20truong-400h.png" class="home-image16" />
+              <img alt="image" src="/public/Loi_ich/tangtruong-400h.webp" class="home-image16" />
               <h3 class="home-text038">
                 Quản lý tiếp nhận xe - Quy trình dịch vụ
               </h3>
@@ -351,7 +354,7 @@
           </animate-on-reveal>
           <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
             <div data-thq-animate-on-reveal="true" class="home-feature-card">
-              <img alt="image" src="/public/Loi ich/tietkiem-400h.png" class="home-image17" />
+              <img alt="image" src="/public/Loi_ich/tietkiem-400h.webp" class="home-image17" />
               <h3 class="home-text038">
                 Quản lý kho thông minh - Cảnh báo tồn kho
               </h3>
@@ -364,19 +367,20 @@
           </animate-on-reveal>
           <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
             <div data-thq-animate-on-reveal="true" class="home-feature-card">
-              <img alt="image" src="/public/Loi ich/chamsoc-400h.png" class="home-image18" />
+              <img alt="image" src="/public/Loi_ich/chamsoc-400h.webp" class="home-image18" />
               <h3 class="home-text038">
                 Quản lý tài chính - Phân tích chỉ số kinh doanh, tăng trưởng.
               </h3>
               <span class="home-text044 Content">
-                Tính năng này giúp bạn nắm bắt được dòng tiền, tối ưu chi phí cho garage của mình. Đưa ra các phương án, chiến lược phù
+                Tính năng này giúp bạn nắm bắt được dòng tiền, tối ưu chi phí cho garage của mình. Đưa ra các phương án,
+                chiến lược phù
                 hợp để phát triển hơn trong tương lai.
               </span>
             </div>
           </animate-on-reveal>
           <animate-on-reveal animation="fadeInUp" duration="700ms" easing="ease-in-out">
             <div data-thq-animate-on-reveal="true" class="home-feature-card">
-              <img alt="image" src="/public/Loi ich/thongtin-400h.png" class="home-image19" />
+              <img alt="image" src="/public/Loi_ich/thongtin-400h.webp" class="home-image19" />
               <h3 class="home-text038">Giao diện thân thiện, dễ sử dụng</h3>
               <span class="home-text046 Content">
                 <span>
@@ -389,7 +393,6 @@
           </animate-on-reveal>
         </div>
       </div>
-      <!-- <img alt="image" src="/public/video%202-1500w.png" class="home-image20" /> -->
       <div id="feature" class="home-feature">
         <div class="home-container26">
           <h1 class="home-text049">Tính năng nổi bật của CARNEXT</h1>
@@ -397,7 +400,7 @@
         <div class="home-container27">
           <div class="home-container28">
             <div class="home-container29">
-              <div class="home-container30">
+              <div class="home-container40">
                 <div class="home-container31">
                   <svg viewBox="0 0 877.7142857142857 1024" class="home-icon04">
                     <path
@@ -406,30 +409,31 @@
                   </svg>
                 </div>
                 <div class="home-container32">
-                  <h1 class="home-text050">Phiếu tiếp nhận</h1>
-                  <h1 class="home-text051 Content">
+                  <h2 class="home-text050">Phiếu tiếp nhận</h2>
+                  <h3 class="home-text051 Content">
                     Có sự tương tác giữa cố vấn, quản đốc và chủ xe.
-                  </h1>
+                  </h3>
                 </div>
               </div>
-              <div class="home-container33">
-                <div class="home-container34">
+              <div class="home-container40">
+                <div class="home-container31">
                   <svg viewBox="0 0 1024 1024" class="home-icon06">
                     <path
                       d="M554 128h342v256h-342v-256zM554 896v-426h342v426h-342zM128 896v-256h342v256h-342zM128 554v-426h342v426h-342z">
                     </path>
                   </svg>
                 </div>
-                <div class="home-container35">
-                  <h1 class="home-text052">Báo cáo</h1>
-                  <h1 class="home-text053 Content">
+                <div class="home-container32">
+                  <h2 class="home-text050">Báo cáo</h2>
+                  <h3 class="home-text051 Content">
                     Thống kê rõ ràng, minh bạch
-                  </h1>
+                  </h3>
                 </div>
               </div>
+
             </div>
             <div class="home-container36">
-              <div class="home-container37">
+              <div class="home-container40">
                 <div class="home-container38">
                   <svg viewBox="0 0 1024 1024" class="home-icon08">
                     <path
@@ -438,12 +442,12 @@
                   </svg>
                 </div>
                 <div class="home-container39">
-                  <h1 class="home-text054">Ứng dụng di động</h1>
-                  <h1 class="home-text055 Content">
+                  <h2 class="home-text054">Ứng dụng di động</h2>
+                  <h3 class="home-text055 Content">
                     Thuận tiện cho chủ xe và garage tương tác với nhau, theo
                     dõi toàn bộ tiền độ xe từ lúc xe vào xưởng đến khi ra
                     xưởng
-                  </h1>
+                  </h3>
                 </div>
               </div>
               <div class="home-container40">
@@ -455,11 +459,11 @@
                   </svg>
                 </div>
                 <div class="home-container42">
-                  <h1 class="home-text056">Dịch vụ chăm sóc Khách hàng</h1>
-                  <h1 class="home-text057 Content">
+                  <h2 class="home-text056">Chăm sóc khách hàng</h2>
+                  <h3 class="home-text057 Content">
                     Chuyển đổi toàn bộ dữ liệu, hỗ trợ tư vấn, hướng dẫn sử
                     dụng qua các kênh liên lạc CSKH 24/7
-                  </h1>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -529,12 +533,12 @@
           <span>Quy trình tiêu chuẩn quản lý &amp; tiếp nhận xe</span>
           <br />
         </h1>
-        <img alt="image" src="/public/Quy trinh/quy%20trinh%20-%20carnext-1400w.png" class="home-image27" />
+        <img alt="image" src="/public/Quy_trinh/progress-web_1.webp" class="home-image27" />
         <script>
           window.onload = function () {
             var img = document.querySelector('.home-image27');
             if (window.innerWidth <= 768) {
-              img.src = "/public/Quy trinh/Progress mobile.png";
+              img.src = "/public/Quy_trinh/progress-mobile.webp";
             }
           }
         </script>
@@ -569,7 +573,7 @@
               </span>
               <span class="home-text079">Trần Minh Đức</span>
               <span class="home-text080">Chủ garage tại Hà Nội</span>
-              <img alt="profile" src="/public/Testi/5af7d27ad7-200h.jpg" class="home-image28" />
+              <img alt="profile" src="/public/Testi/5af7d27ad7-200h.webp" class="home-image28" />
             </div>
           </div>
           <div class="home-testimonial-card">
@@ -589,7 +593,7 @@
               </span>
               <span class="home-text082">Mai Hải Nam</span>
               <span class="home-text083">Chủ Garage tại Đà Nẵng</span>
-              <img alt="profile" src="/public/Testi/94472e133d-200h.jpg" class="home-image29" />
+              <img alt="profile" src="/public/Testi/94472e133d-200h.webp" class="home-image29" />
             </div>
           </div>
           <div class="home-testimonial-card">
@@ -609,12 +613,14 @@
               </span>
               <span class="home-text085">Nguyễn Minh Nhật</span>
               <span class="home-text086">Chuỗi garage tại TP.HCM</span>
-              <img alt="profile" src="/public/Testi/df37eb59e2-200h.jpg" class="home-image30" />
+              <img alt="profile" src="/public/Testi/df37eb59e2-200h.webp" class="home-image30" />
             </div>
           </div>
         </div>
       </div>
-      <div id="price" class="home-pricing">
+
+
+      <div id="price" class="home-pricing-web">
         <table class="table table-bordered text-center mt-4">
           <thead>
             <tr>
@@ -652,19 +658,13 @@
             <tr>
               <td class="text-start ps-4">Quản lý kho</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
@@ -672,99 +672,67 @@
               <td></td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Quản lý sản phẩm</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Quản lý bán lẻ</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Sổ quỹ</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Báo cáo kho</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Báo cáo tài chính</td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
@@ -776,23 +744,17 @@
 
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Quản lý phiếu tiếp nhận</td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
@@ -800,37 +762,27 @@
               <td></td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">Quản lý Lịch hẹn</td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
               <td class="text-start ps-4">App mobile quản lý</td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
             <tr>
@@ -838,14 +790,281 @@
               <td></td>
               <td></td>
               <td>
-                <div class="plan-checkbox">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
-                </div>
+                <i class="fa fa-check-circle icon-green"></i>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
+
+      <div id="price" class="home-pricing-mobile">
+        <table class="table table-bordered text-center mt-4">
+          <thead>
+            <tr>
+              <th scope="col" colspan="2">
+                <span class="text-title">Gói tiết kiệm</span>
+                <br />
+                <span class="text-price">3.600.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="2" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý sản phẩm</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý bán lẻ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Sổ quỹ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý Lịch hẹn</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App mobile quản lý</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App CSKH - Carinfo</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered text-center mt-4">
+          <thead>
+            <tr>
+              <th scope="col" colspan="2">
+                <span class="text-title">Gói tiêu chuẩn</span>
+                <br />
+                <span class="text-price">9.000.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="3" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý sản phẩm</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý bán lẻ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Sổ quỹ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận (nâng cao)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý Lịch hẹn</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App mobile quản lý</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App CSKH - Carinfo</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered text-center mt-4">
+          <thead>
+            <tr>
+              <th scope="col" colspan="2">
+                <span class="text-title">Gói nâng cao</span>
+                <br />
+                <span class="text-price">11.000.000 VND</span>
+                <br />
+                <a style="cursor: pointer" href="#contact" data-package="4" class="button-contact  mt-2">
+                  <span>Liên hệ sử dụng</span>
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý kho (nâng cao)</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý sản phẩm</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý bán lẻ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Sổ quỹ</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo kho</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Báo cáo tài chính (nâng cao)</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý phiếu tiếp nhận (nâng cao)</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">Quản lý Lịch hẹn</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App mobile quản lý</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4">App CSKH - Carinfo</td>
+              <td>
+                <i class="fa fa-check-circle icon-green"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <form class="home-form">
         <div id="contact" class="home-container59">
           <div class="home-container60">
@@ -853,20 +1072,20 @@
               <h1 class="home-text087">TƯ VẤN MIỄN PHÍ</h1>
               <div class="home-container62">
                 <div class="home-container63">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image32" />
+                  <i class="fa fa-check-circle icon-green"></i>
                   <span class="home-text088">
                     Ưu đãi hàng năm cho khách hàng đã đăng ký sử dụng
                   </span>
                 </div>
                 <div class="home-container64">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image33" />
+                  <i class="fa fa-check-circle icon-green"></i>
                   <span class="home-text089">
                     <span>Đào tạo tận nơi sử dụng ứng dụng</span>
                     <span></span>
                   </span>
                 </div>
                 <div class="home-container65">
-                  <img alt="image" src="/public/tick-600h.png" class="home-image34" />
+                  <i class="fa fa-check-circle icon-green"></i>
                   <span class="home-text092">
                     Đội ngũ chăm sóc khách hàng trọn đời, sẵn sàng phục vụ
                     24/7
@@ -901,7 +1120,7 @@
               </script>
               <button type="button" onclick="handleSubmit()" class="home-button button">
                 <span class="home-text093">
-                  <span>LIÊN HỆ DÙNG THỬ</span>
+                  <span>DÙNG THỬ MIỄN PHÍ</span>
                   <br />
                 </span>
               </button>
@@ -912,13 +1131,12 @@
       <div class="home-container68">
         <footer class="home-footer">
           <div class="home-container69">
-            <img alt="image" src="/public/carnext%20logo_w-200h.png" class="home-image36" />
+            <img alt="image" src="/public/carnext-logo_w-200h.webp" class="home-image36" />
             <div class="home-container70">
               <span class="home-text096"><a href="tel:0397 985 866">Hotline: 0397 985 866</a></span>
               <span class="home-text097"><a href="mailto:info@uninext.vn">Email: info@uninext.vn</a></span>
               <span class="home-text097">
-                <a
-                target="_blank"
+                <a target="_blank"
                   href="https://www.google.com/maps/place/34+Ng.+5+%C4%90.+Ho%C3%A0ng+Qu%E1%BB%91c+Vi%E1%BB%87t,+Ngh%C4%A9a+%C4%90%C3%B4,+C%E1%BA%A7u+Gi%E1%BA%A5y,+H%C3%A0+N%E1%BB%99i+100000/@21.0449961,105.8045267,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ab3d6999b691:0x8c8a866a68a49fac!8m2!3d21.0449961!4d105.8045267!16s%2Fg%2F11p67fncn6?entry=ttu">
                   Địa chỉ: Số nhà 34, ngõ 5, Hoàng Quốc Việt, Nghĩa Đô, Cầu Giấy, Hà Nội, Việt Nam
                 </a>

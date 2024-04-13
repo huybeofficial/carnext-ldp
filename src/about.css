@@ -275,7 +275,7 @@
   flex-direction: column;
   background-size: cover;
   justify-content: center;
-  background-image: url(public/footerbackgounr-1500w.png);
+  background-image: url("public/footerbackgounr-1500w.webp");
   background-position: center;
 }
 .about-footer {
