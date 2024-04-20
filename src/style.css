@@ -44,12 +44,15 @@
   background-color: var(--dl-color-gray-white);
 }
 .button-contact{
-  color: var(--dl-color-gray-white);
+  color: rgb(37, 46, 109);
+  cursor: pointer;
   height: auto;
   align-self: flex-start;
   padding: 10px;
+  margin: 0 !important;
   border-radius: 5px;
-  background-color: rgb(37, 46, 109);
+  /* background-color: rgb(37, 46, 109); */
+  border: 2px solid rgb(37, 46, 109);
   display: inline-block;
   text-decoration: none;
 
@@ -108,7 +111,7 @@ th {
 }
 .text-title {
   color: rgb(37, 46, 109);
-  font-size: 1em;
+  font-size: 1.3em;
 }
 .text-price{
   color: gray;
@@ -131,4 +134,86 @@ margin: 15px;
   color: #479E45;
   padding: 0 15px 0 15px;
   font-size: 1.25rem;
+}
+
+.home-pricing {
+  width: 100%;
+  padding: 30px;
+  background-image: url("public/footerbackgounr-1500w.webp");;
+  /* background-color: #f5f5f5; */
+}
+.home-pricing thead {
+  display: flex;
+  justify-content: center;
+  border-bottom-width: 1px;
+  
+}
+.home-pricing .table {
+  padding-top: 30px;
+}
+.home-pricing .card-popular {
+  border: 5px solid #FB6A00;
+}
+.home-pricing .btn-popular {
+  background-color: #FB6A00;
+  color: white;
+  border: none !important;
+
+}
+.home-pricing .table>:not(caption)> * > * {
+border: none !important;
+}
+
+.home-pricing tbody td {
+  line-height: 20px;
+  min-height: 20px;
+}
+.col-service {
+  padding: 10px;
+}
+.popular {
+  position: absolute;
+  top: -30px;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* border: 1px solid rgba(224, 26, 26, 0.2); */
+  background-color: white;
+  border-radius: 5px;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  animation:none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes jump {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40%,
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.button {
+  animation: jump 2s infinite;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.feature-container {
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
 }

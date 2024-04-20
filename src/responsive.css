@@ -5,7 +5,12 @@
     .home-pricing-mobile {
         display: none !important;
     }
+    .col-service {
+        min-height: 700px;
+    }
+    
 }
+
 
 @media (max-width: 819px) {
     .home-pricing-web {
@@ -14,5 +19,8 @@
 
     .home-pricing-mobile {
         display: block !important;
+    }
+    .col-service {
+        min-height: 500px;
     }
 }
